@@ -10,7 +10,7 @@ public class Cat extends Animal
         // Constructor chaining
         // Constructing the Cat and the Animal
         super(name);
-        setNumLives = 9;
+        setNumLives(9);
     }
 
     public int getNumLives() {

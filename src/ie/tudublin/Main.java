@@ -6,7 +6,32 @@ public class Main
     {
         System.out.println("Hello World!");
 
-        Animal a = new Animal();
+        // Animal a = new Animal();
+
+        // Not Polymorphism
+        Cat topcat = new Cat("Topcat");
+
+        // Polymorphism
+        Animal mino = new Cat("Mino");
+
+        // Uses the speak() from Cat.java
+        // A virtual method - dynamic binding
+        mino.speak();
+
+        // System.out.println(mino.getNumLives());
+        // won't compile because the compiler doesn't
+        //  know which class mino is because mino only
+        //  gets instantiated when the code is run.
+        // Example of castings
+        System.out.println(((Cat)mino).getNumLives());
+
+        // If the type is animal then the objects can 
+        //  be either a cat or dog class
+        mino = new Dog("Misty");
+        // This will not compile because the type is Cat
+        //topCat = new Dog("Tara");
+
+        
     }
 
 }
