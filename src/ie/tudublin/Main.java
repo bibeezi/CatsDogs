@@ -31,7 +31,22 @@ public class Main
         // This will not compile because the type is Cat
         //topCat = new Dog("Tara");
 
-        
+        Animal a = new Cat("a");
+        Animal b = new Cat("b");
+
+        System.out.println(a);
+        System.out.println(b);
+
+        // primitive types : ints and floats
+        //  would print c b
+        // but prints c c because of object referencing
+        //  a now points to b
+        a = b;
+
+        a.setName("c");
+
+        System.out.println(a);
+        System.out.println(b);
     }
 
 }

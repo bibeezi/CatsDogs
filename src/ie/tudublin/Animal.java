@@ -30,4 +30,13 @@ public class Animal
     {
         System.out.println("Animals can't speak!");
     }
+
+    // ALWAYS
+    // Converts a class into a string
+    // Gets called automatically
+    // Returns String
+    public String toString()
+    {
+        return getName();
+    }
 }
